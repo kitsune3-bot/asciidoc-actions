@@ -22,3 +22,20 @@ jobs:
       - name: Run Asciidoctor PDF
         run: |
           docker run --rm -v $(pwd)/docs:/documents asciidoctor/docker-asciidoctor asciidoctor-pdf -a scripts=cjk -a pdf-theme=default-with-fallback-font -a attribute-missing=warn --failure-level=WARN -D output *.adoc
+
+      - name: Setup Git for push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit generated files
+        run: |
+          git checkout -b build
+          git add output/*.pdf
+          git commit -m "latest pdf"
+
+      - name: Push to branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push origin build --force
