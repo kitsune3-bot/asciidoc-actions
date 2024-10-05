@@ -1,4 +1,4 @@
-= Document Title
+= 職務経歴書
 Doc Writer <doc@example.com>
 :reproducible:
 :listing-caption: Listing
@@ -7,21 +7,12 @@ Doc Writer <doc@example.com>
 :attribute-missing: warn
 :failure-level: WARN
 
-// Uncomment next line to add a title page (or set doctype to book)
-//:title-page:
-// Uncomment next line to set page size (default is A4)
-//:pdf-page-size: Letter
+
+== 経歴
+
+工学系大学院で機械学習を専攻。
 
 
-
-An example of a basic https://asciidoc.org[AsciiDoc] document prepared by {author}.
-
-== Conclusion
-
-That's all, folks!
-
-
-あああ
 
 
 aaa
