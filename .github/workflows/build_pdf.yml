@@ -30,7 +30,8 @@ jobs:
 
       - name: Commit generated files
         run: |
-          git checkout -b build
+          git checkout --orphan build
+          git reset
           git add $(pwd)/docs/output/*.pdf
           git commit -m "latest pdf"
 
