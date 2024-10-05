@@ -21,4 +21,4 @@ jobs:
 
       - name: Run Asciidoctor PDF
         run: |
-          docker run --rm -v $(pwd):/documents asciidoctor/docker-asciidoctor asciidoctor-pdf -a scripts=cjk -a pdf-theme=default-with-fallback-font -a attribute-missing=warn --failure-level=WARN -D output *.adoc
+          docker run --rm -v $(pwd)/docs:/documents asciidoctor/docker-asciidoctor asciidoctor-pdf -a scripts=cjk -a pdf-theme=default-with-fallback-font -a attribute-missing=warn --failure-level=WARN -D output *.adoc
