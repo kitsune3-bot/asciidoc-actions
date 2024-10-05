@@ -31,7 +31,7 @@ jobs:
       - name: Commit generated files
         run: |
           git checkout -b build
-          git add output/*.pdf
+          git add $(pwd)/docs/output/*.pdf
           git commit -m "latest pdf"
 
       - name: Push to branch
