@@ -1,0 +1,42 @@
+= Document Title
+Doc Writer <doc@example.com>
+:reproducible:
+:listing-caption: Listing
+:source-highlighter: rouge
+:toc:
+:attribute-missing: warn
+:failure-level: WARN
+
+// Uncomment next line to add a title page (or set doctype to book)
+//:title-page:
+// Uncomment next line to set page size (default is A4)
+//:pdf-page-size: Letter
+
+
+
+An example of a basic https://asciidoc.org[AsciiDoc] document prepared by {author}.
+
+== Conclusion
+
+That's all, folks!
+
+
+あああ
+
+
+aaa
+
+[cols="3,2,5", options="header"]
+|===
+| Column 1 | Column 2 | Column 3
+
+| Row 1, Column 1
+| Row 1, Column 2
+| Row 1, Column 3
+
+| Row 2, Column 1
+| Row 2, Column 2
+| Row 2, Column 3 +
+aaa +
+vvva
+|===
